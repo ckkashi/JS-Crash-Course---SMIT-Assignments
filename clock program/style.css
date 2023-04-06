@@ -1,0 +1,52 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+}
+
+body{
+    /* background: green; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clock{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    height: 20vh;
+    background: black;
+    border-radius: 20em;
+    color: white;
+}
+
+#clock p{
+    font-size: 1.3rem;
+}
+
+#clock h1{
+    font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 768px){
+
+    #clock{
+        width: 70vw;
+        background-color: green;
+    }
+
+}
+
+@media only screen and (max-width: 420px){
+
+    #clock{
+        width: 70vw;
+        background-color: red;
+    }
+
+}
