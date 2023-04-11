@@ -68,3 +68,41 @@
 // chngBgColor("#head1","grey")
 // chngBgColor("h2","red")
 
+// --------------------------------------------------------------------------------------------------------------------------------------------
+
+// 6. Write a function that saves an object to localStorage. The function should take two arguments: the first argument is a string representing the key to use for storing the object, and the second argument is the object to store.
+// let obj = {
+//     name:"Kashif Shaikh",
+//     contact:"03233521729",
+//     gender:"Male"
+// }
+// function storeObject(key,object) {
+//     localStorage.setItem(key,JSON.stringify(object));
+// }
+// storeObject('keyObj1',obj);
+
+// --------------------------------------------------------------------------------------------------------------------------------------------
+
+// 7. Write a function that retrieves an object from localStorage. The function should take one argument, which is a string representing the key used to store the object. The function should return the object.
+// function retrieveObject(key) {
+//     return JSON.parse(localStorage.getItem(key));
+// }
+// console.log(retrieveObject('keyObj1'));
+
+// 8. Write a function that takes an object and saves each property to localStorage using the property name as the key and the property value as the value. The function should also retrieve the object from localStorage and return it as a new object.
+// let obj1 = {
+//     'name':"Kashif Shaikh",
+//     'contact':"03233521729",
+//     'gender':"Male"
+// }
+// function addTo(obj) {
+//     for (const key in obj) {
+//         localStorage.setItem(key,JSON.stringify(obj[key]));
+//     }
+//     let newObj = {}
+//     for (const key in obj) {
+//         newObj[key] = JSON.parse(localStorage.getItem(key));
+//     }
+//     return newObj;
+// }
+// console.log(addTo(obj1));
