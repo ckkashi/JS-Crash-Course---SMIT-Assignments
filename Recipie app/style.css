@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+header{
+    width: 100vw;
+    background-color: coral;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+header div.search-box input{
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem;
+    background-color: white;
+    font-size: 0.9rem;
+}
+header div.search-box button{
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem;
+    background-color: black;
+    color: coral;
+    font-size: 0.9rem;
+    margin-left: 0.3vw;
+}
+
+main{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+main section{
+    width: 40vw;
+    height: 85vh;
+    background-color: white;
+    margin: 1rem;
+    border-radius: 1rem;
+    overflow: auto;
+
+}
+
+ul{
+    list-style: none;
+}
+ul li{
+    width: 93%;
+    background-color: coral;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: default;
+}
+
+
+
+main section#recipie-detail{
+    padding: 1rem;
+}
+
+@media only screen and (max-width:720px){
+
+    header{
+        flex-direction: column;
+    }
+
+    header div.search-box{
+        margin-top: 1vh;
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    main section{
+        width: 90vw;
+    }
+
+}
