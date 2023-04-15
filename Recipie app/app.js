@@ -9,26 +9,35 @@
     const data = await response.json();
 
     function setSearchResults(searchResults) {
-        if (searchResults.length !== 0) {
-            console.log(searchResults.length);
             recipiesList.innerHTML = '';
-            searchResults.map(function (result) {
-                let listItem = document.createElement("li");
-                listItem.innerHTML = `<h1>${result.title}</h1>
-                <br>
-                <p>${result.description !== null ? result.description : 'Description not found.'}</p>
-                `;
-                listItem.addEventListener('click',function () {
-                    showDetail(result);
-                    window.location='#recipie-detail';
+            let loading = document.createElement("img");
+            loading.src = "./loading.gif";
+            recipiesList.appendChild(loading);
+
+
+        setTimeout( function(){
+            if (searchResults.length !== 0) {
+                
+                console.log(searchResults.length);
+                recipiesList.innerHTML = '';
+                searchResults.map(function (result) {
+                    let listItem = document.createElement("li");
+                    listItem.innerHTML = `<h1>${result.title}</h1>
+                    <br>
+                    <p>${result.description !== null ? result.description : 'Description not found.'}</p>
+                    `;
+                    listItem.addEventListener('click',function () {
+                        showDetail(result);
+                        window.location='#recipie-detail';
+                    });
+                    recipiesList.appendChild(listItem);
                 });
-                recipiesList.appendChild(listItem);
-            });
-        }else{
-            alert('Nothing found any recipie of the search.')
-            setSearchResults(data);
-            searchArea.value = '';
-        }
+            }else{
+                alert('Nothing found any recipie of the search.')
+                setSearchResults(data);
+                searchArea.value = '';
+            }
+        }, 3000);
     }
 
     setSearchResults(data);

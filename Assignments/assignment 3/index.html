@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Recommendation App</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="./app.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Movie Recommendation App</h1>
+        </header>
+        <main>
+            <section class="selection-fields">
+                <div class="genre">
+                    <h4>genre</h4> 
+                    <select name="genreField" id="genreField">
+                        <option value="All">All</option>
+                    </select>
+                </div>
+                <div class="year">
+                    <h4>year</h4> 
+                    <select name="yearField" id="yearField">
+                        <option value="All">All</option>
+                    </select>
+                </div>
+                <div class="language">
+                    <h4>language</h4> 
+                    <select name="languageField" id="languageField">
+                        <option value="All">All</option>
+                    </select>
+                </div>  
+                <div class="rating">
+                    <h4>rating</h4> 
+                    <select name="ratingField" id="ratingField">
+                        <option value="All">All</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="results">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th width="80%" style="text-align: left;">Movie</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                </table>
+            </section>
+        </main>
+
+    </body>
+</html>

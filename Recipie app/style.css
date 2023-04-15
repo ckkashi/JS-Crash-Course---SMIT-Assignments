@@ -44,6 +44,8 @@ main{
     justify-content: center;
 }
 
+
+
 main section{
     width: 40vw;
     height: 85vh;
@@ -52,6 +54,13 @@ main section{
     border-radius: 1rem;
     overflow: auto;
 
+}
+
+#recipies-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 ul{

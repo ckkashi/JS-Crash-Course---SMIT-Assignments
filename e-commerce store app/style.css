@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header{
+    width: 100vw;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 1rem;
+    position: fixed;
+    top: 0%;
+}
+
+header div.brand-container{
+    display: flex;
+}
+
+header div.brand-container button#mobile-menu-btn{
+    display: none;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+    font-size: 0.9rem;
+}
+
+header nav{
+    display:flex;
+    align-items: center;
+}
+
+header nav ul{
+    list-style-type: none;
+    display:flex;
+}
+
+header nav ul li{
+    padding: 10px 15px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+header nav ul li a:hover{
+    text-decoration: underline;
+}
+
+header nav div.search-box input{
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 0.5rem;
+    background-color: white;
+    font-size: 0.9rem;
+}
+header nav div.search-box button{
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+    font-size: 0.9rem;
+    margin-left: 0.3vw;
+}
+
+main{
+    margin-top: 72px;
+}
+
+@media only screen and (max-width:720px){
+
+    header{
+        flex-direction: column;
+    }
+
+    header nav{
+        flex-direction: column;
+        display: none;
+    }
+
+    header nav ul{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header div.search-box{
+        margin-top: 1vh;
+    }
+
+    header div.brand-container{
+        align-items: center;
+    }
+
+    header div.brand-container button#mobile-menu-btn{
+        display: block;
+        position: absolute;
+        right: 2%;
+    }
+    header nav div.search-box input{
+        width: 70vw;
+    }
+
+    header div.brand-container div.brand-area h1{
+        font-size: 1.6rem;
+    }
+
+}
