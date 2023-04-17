@@ -97,7 +97,7 @@
             filterData = filterData.filter((dataObj)=>{
                 return ratingField.value !== 'All'?dataObj.vote_average == ratingField.value:dataObj;
             })
-            console.log(filterData);
+            // console.log(filterData);
             resultsTable.innerHTML = '';
             let loadingDiv = document.createElement('div');
             loadingDiv.className = 'loadingDiv'
